@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>File Upload</title>
+</head>
+<body>
+	
+    <style>
+    	.row{ width: 50%; margin:0 auto;}
+    	input{ 	padding: 10px; }
+    	p{ 	font-size: 16px; font-weight: 100;     	}
+    </style>
+    
+	<div class="row">
+		<h1>Welcome to file upload tutorial</h1>
+		<p>* express</p>
+		<p>* body-parser</p>
+		<p>* express-fileupload</p>
+		<div class="col-md-12">
+			<h3><%= typeof msg != 'undefined' ? msg: '' %></h3> <br>
+			<form action="/create" method="post"  enctype="multipart/form-data">
+				<input type="text" name="name" required="true" placeholder="Name">
+				<input type="file" name="photo">
+				<input type="submit" name="submit" placeholder="">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
